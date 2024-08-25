@@ -1,0 +1,80 @@
+.main-contact {
+  width: 100%;
+  position: relative;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  z-index: 2;
+}
+.main-contact-h2 {
+  margin: 30px 0 20px 0;
+}
+.main-contact-h2 h2 {
+  font-size: 18px;
+}
+.main-contact-details {
+  display: flex;
+}
+.main-contact-left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.main-contact-left input,
+.main-contact-left textarea,
+.main-content-left select {
+  border: 1px solid black;
+  border-radius: 20px;
+  margin-bottom: 6px;
+  background-color: white;
+  width: 50%;
+}
+.main-contact input::placeholder {
+  padding-left: 10px;
+  color: black;
+}
+.main-contact textarea::placeholder {
+  padding-left: 10px;
+  color: black;
+}
+.main-contact-left textarea {
+  width: 80%;
+}
+.select {
+  border-radius: 20px;
+  margin-bottom: 6px;
+  height: 37px;
+  border: 1px solid black;
+  width: 50%;
+  padding-left: 10px;
+}
+
+.main-contact button {
+  background-color: rgb(255, 212, 92);
+  width: 80%;
+  margin-top: 20px;
+  border-radius: 20px;
+  padding: 5px;
+  border: none;
+}
+.main-contact-right {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+.main-contact-right-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: max-content;
+  padding: 10px 0;
+  border: 1px solid black;
+  width: 60%;
+  border-radius: 5%;
+}
+
+.main-contact-right img {
+  max-width: 600px;
+  height: 100px;
+}

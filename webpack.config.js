@@ -6,7 +6,7 @@ module.exports = {
   entry: './src/index.js',
   output: {
     filename: 'src/[name].[fullhash].js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
   },
   module: {
     rules: [
@@ -17,19 +17,23 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             presets: ['@babel/preset-env'],
-            plugins: ['@babel/plugin-proposal-object-rest-spread']
-          }
-        }
+            plugins: ['@babel/plugin-proposal-object-rest-spread'],
+          },
+        },
       },
       {
         test: /\.(c|sa|sc)ss$/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+      },
+      { test: /\.ts$/, use: 'ts-loader' },
+      {
+        test: /\.(png|jpe?g|gif|svg)$/,
         use: [
-          "style-loader",
-          "css-loader",
-          "sass-loader",
+          {
+            loader: 'file-loader',
+          },
         ],
       },
-      { test: /\.ts$/, use: 'ts-loader' }
     ],
   },
   devServer: {
@@ -42,20 +46,20 @@ module.exports = {
       logging: 'info',
       overlay: true,
       progress: true,
-      webSocketTransport: 'ws'
+      webSocketTransport: 'ws',
     },
-    webSocketServer: 'ws'
+    webSocketServer: 'ws',
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'src/index.html'),
       inject: 'body',
-      hash: true
+      hash: true,
     }),
     new ESLintPlugin({
       extensions: 'js',
       exclude: 'node_modules',
-      files: './src/'
-    })
-  ]
+      files: './src/',
+    }),
+  ],
 };

@@ -1,0 +1,141 @@
+// Main
+.main-accueil {
+  display: flex;
+  flex-direction: column;
+}
+.main-accueil-elements {
+  display: flex;
+  gap: 30px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.sidebar-nav {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  // justify-content: center;
+  margin-top: 50px;
+  position: relative;
+  padding: 20px 0;
+}
+.sidebar-nav a {
+  width: max-content;
+  color: white;
+  border: 1px solid black;
+  z-index: 1;
+  padding: 8px 30px;
+}
+.sidebar-nav .temoignage {
+  padding: 12px 20px;
+}
+.sidebar-nav .contact {
+  padding: 8px 40px;
+}
+.sidebar-nav a:hover {
+  color: black;
+  scale: (1.1);
+}
+.barre {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: -5px;
+}
+.barre img {
+  max-width: 80px;
+}
+.nuage1 {
+  position: absolute;
+  right: 20px;
+  top: -5%;
+}
+.nuage2 {
+  position: absolute;
+  left: 20px;
+  top: 23%;
+}
+.nuage3 {
+  position: absolute;
+  right: 25px;
+  top: 43%;
+}
+.heart {
+  position: absolute;
+  top: -60px;
+  right: 5px;
+}
+
+// Carousel
+.carousel {
+  width: 100%;
+}
+.carousel-inner {
+  border-radius: 20px;
+}
+
+.videos {
+  border-radius: 50px;
+  rotate: (-5deg);
+}
+.temoignages {
+  border-radius: 5px;
+  rotate: (8deg);
+}
+.contact {
+  padding: 2px 35px;
+  border-radius: 10px;
+}
+
+.categories {
+  background-color: white;
+}
+.categories h2 {
+  padding-left: 20px;
+  margin-top: 30px;
+  margin: 30px 0 20px 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.categories-video {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}
+// .categories-video {
+//   display: flex;
+//   flex-wrap: wrap;
+//   gap: 10px;
+//   justify-content: center;
+//   align-items: center;
+//   width: 80%;
+// }
+// .categories-video-img {
+//   display: grid;
+//   grid-template-columns: reapt(3, 1fr);
+//   grid-template-rows: repeat(3, 1fr);
+// }
+// .glossaire,
+// .cyber,
+// .solitude {
+//   width: 30%;
+// }
+.categories-video a {
+  width: 200px;
+  height: 100x;
+  padding: 0;
+  // display: inline-block;
+}
+.bulle img,
+svg {
+  width: 200px;
+  height: 100px;
+  object-fit: contain;
+  padding: 0;
+}
