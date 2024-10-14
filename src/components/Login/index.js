@@ -14,7 +14,7 @@ const Login = () => {
     if (email === 'jdoe@ymail.com' && password === 'demo') {
       setError('');
       // Redirection vers une autre page, ici un composant React utilisant react-router
-      window.location.href = '/profil'; // Rediriger vers une page Home par exemple
+      window.location.href = '/profil';
     } else {
       setError('Adresse mail ou mot de passe incorrect.');
     }

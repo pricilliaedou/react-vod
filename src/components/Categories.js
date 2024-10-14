@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 const Categories = () => (
   <div className='categories-all-pages'>
@@ -10,7 +10,7 @@ const Categories = () => (
       <Link to='/jeux-videos'>Jeux vidéos</Link>
       <Link to='/contenu-adultes'>Contenu adultes</Link>
       <Link to='/controle-parental'>Contrôle parental</Link>
-      <Link to='/impact-addiction'>L&apos;impacte des addictions</Link>
+      <Link to='/impact-addiction'>L&apos;impact des addictions</Link>
     </nav>
   </div>
 );

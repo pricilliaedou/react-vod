@@ -16,7 +16,6 @@
   flex-direction: column;
   gap: 20px;
   align-items: center;
-  // justify-content: center;
   margin-top: 50px;
   position: relative;
   padding: 20px 0;
@@ -108,29 +107,11 @@
   align-items: center;
   width: 80%;
 }
-// .categories-video {
-//   display: flex;
-//   flex-wrap: wrap;
-//   gap: 10px;
-//   justify-content: center;
-//   align-items: center;
-//   width: 80%;
-// }
-// .categories-video-img {
-//   display: grid;
-//   grid-template-columns: reapt(3, 1fr);
-//   grid-template-rows: repeat(3, 1fr);
-// }
-// .glossaire,
-// .cyber,
-// .solitude {
-//   width: 30%;
-// }
+
 .categories-video a {
   width: 200px;
   height: 100x;
   padding: 0;
-  // display: inline-block;
 }
 .bulle img,
 svg {
