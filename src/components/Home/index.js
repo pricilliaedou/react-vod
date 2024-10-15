@@ -5,24 +5,26 @@ import Header from "../Header";
 import Footer from "../Footer";
 import barre from "../../assets/barre.png";
 import nuage from "../../assets/nuage.png";
-import rs from "../../assets/rs.png";
-import cerveau from "../../assets/cerveau.png";
-import cyberharcelement from "../../assets/cyberharcelement.png";
-import ecran from "../../assets/ecran.png";
-import glossaire from "../../assets/glossaire.png";
-import jeuxVideos from "../../assets/jeux-videos.png";
-import information from "../../assets/information.png";
-import solidtude from "../../assets/solitude.png";
-import prevention from "../../assets/prevention.png";
+import rs from "../../assets/rs.webp";
+import cerveau from "../../assets/cerveau.webp";
+import cyberharcelement from "../../assets/cyberharcelement.webp";
+import ecran from "../../assets/ecran.webp";
+import glossaire from "../../assets/glossaire.webp";
+import jeuxVideos from "../../assets/jeux-videos.webp";
+import information from "../../assets/information.webp";
+import solidtude from "../../assets/solitude.webp";
+import prevention from "../../assets/prevention.webp";
 import iconeEtoile from "../../assets/iconeEtoileBulles.svg";
 import background from "../../assets/background.png";
 import "./style.scss";
+import Navbar from "../Navbar";
 
 const Home = () => (
   <div className='container' style={{ backgroundImage: `url(${background})` }}>
     <Header />
     <main>
       <div className='main-accueil'>
+        <Navbar />
         <div className='main-accueil-elements'>
           <nav className='sidebar-nav'>
             <Link to='/' className='accueil'>
@@ -103,34 +105,36 @@ const Home = () => (
 
         <div className='categories'>
           <h2>S&apos;informer selon mes besoins</h2>
-          <div className='categories-video'>
-            <Link to={"/login"} className='rs categogry bulle'>
-              <img src={rs} alt='réseaux sociaux' />
-            </Link>
-            <Link to={"/login"} className='ecran bulle'>
-              <img src={ecran} alt='écran' />
-            </Link>
-            <Link to={"/login"} className='informer bulle'>
-              <img src={information} alt='information' />
-            </Link>
-            <Link to={"/login"} className='jeux bulle'>
-              <img src={jeuxVideos} alt='jeux videos' />
-            </Link>
-            <Link to={"/login bulle"} className='prevention'>
-              <img src={prevention} alt='prevention' />
-            </Link>
-            <Link to={"/login"} className='cerveau bulle'>
-              <img src={cerveau} alt='cerveau' />
-            </Link>
-            <dLink to={"/login"} className='solitude bulle'>
-              <img src={solidtude} alt='solitude' />
-            </dLink>
-            <Link to={"/login"} className='cyber bulle'>
-              <img src={cyberharcelement} alt='cyberharcelement' />
-            </Link>
-            <Link to={"/login"} className='glossaire bulle'>
-              <img src={glossaire} alt='glossaire' />
-            </Link>
+          <div className='bloc-categories'>
+            <div className='categories-video'>
+              <Link to={"/login"} className='bulle'>
+                <img src={rs} alt='réseaux sociaux' />
+              </Link>
+              <Link to={"/login"} className='bulle'>
+                <img src={ecran} alt='écran' />
+              </Link>
+              <Link to={"/login"} className='bulle'>
+                <img src={information} alt='information' />
+              </Link>
+              <Link to={"/login"} className='bulle'>
+                <img src={jeuxVideos} alt='jeux videos' />
+              </Link>
+              <Link to={"/login"} className='bulle'>
+                <img src={prevention} alt='prevention' />
+              </Link>
+              <Link to={"/login"} className='bulle'>
+                <img src={cerveau} alt='cerveau' />
+              </Link>
+              <dLink to={"/login"} className='bulle'>
+                <img src={solidtude} alt='solitude' />
+              </dLink>
+              <Link to={"/login"} className='bulle'>
+                <img src={cyberharcelement} alt='cyberharcelement' />
+              </Link>
+              <Link to={"/login"} className='bulle'>
+                <img src={glossaire} alt='glossaire' />
+              </Link>
+            </div>
           </div>
         </div>
       </div>

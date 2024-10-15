@@ -1,6 +1,5 @@
-node_modules
-dist
-webpack.config.js
-.yarn-error.log
+node_modules;
+dist;
+webpack.config.js.yarn - error.log;
 
-src/scss/
+src / scss;
