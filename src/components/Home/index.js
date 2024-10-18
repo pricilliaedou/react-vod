@@ -125,9 +125,9 @@ const Home = () => (
               <Link to={"/login"} className='bulle'>
                 <img src={cerveau} alt='cerveau' />
               </Link>
-              <dLink to={"/login"} className='bulle'>
+              <Link to={"/login"} className='bulle'>
                 <img src={solidtude} alt='solitude' />
-              </dLink>
+              </Link>
               <Link to={"/login"} className='bulle'>
                 <img src={cyberharcelement} alt='cyberharcelement' />
               </Link>

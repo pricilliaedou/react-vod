@@ -65,7 +65,7 @@ const Contact = () => {
             </div>
 
             <div>
-              <input type='text' placeholder='Prénom' />
+              <input type='text' placeholder='Prenom' />
             </div>
             <div>
               <select className='select'>

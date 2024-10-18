@@ -1,20 +1,33 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Page from './components/Page';
-import Home from './components/Home';
-import Videos from './components/Videos';
-import Temoignages from './components/Temoignages';
-import Contact from './components/Contact';
-import Login from './components/Login';
-import Profil from './components/Profil';
-import Association from './components/Association';
-import Error404 from './components/Error404';
+import Page from "./components/Page";
+import Home from "./components/Home";
+import Videos from "./components/Videos";
+import Temoignages from "./components/Temoignages";
+import Contact from "./components/Contact";
+import Login from "./components/Login";
+import Signup from "./components/Signup";
+import Profil from "./components/Profil";
+import Association from "./components/Association";
+import Error404 from "./components/Error404";
 
 const RoutesConfig = () => (
   <Router>
     <Routes>
       <Route index element={<Home />} />
+
+      {/* <Route
+          path='/videos'
+          element={
+            <PrivateRoute>
+              <Page>
+                <Videos />
+              </Page>
+            </PrivateRoute>
+          }
+        /> */}
+
       <Route
         path='/videos'
         element={
@@ -23,6 +36,7 @@ const RoutesConfig = () => (
           </Page>
         }
       />
+
       <Route
         path='/cyberharcelement'
         element={
@@ -31,6 +45,7 @@ const RoutesConfig = () => (
           </Page>
         }
       />
+
       <Route
         path='/reseaux-sociaux'
         element={
@@ -89,6 +104,7 @@ const RoutesConfig = () => (
         }
       />
       <Route path='/login' element={<Login />} />
+      <Route path='/signup' element={<Signup />} />
       <Route path='/profil' element={<Profil />} />
       <Route
         path='/notre-histoire'
@@ -104,3 +120,27 @@ const RoutesConfig = () => (
 );
 
 export default RoutesConfig;
+
+// function App() {
+//   return (
+//     <AuthProvider>
+//       <Router>
+//         <Routes>
+//           <Route path='/' element={<Home />} />
+//           <Route path='/login' element={<Login />} />
+//         </Routes>
+//       </Router>
+//     </AuthProvider>
+//   );
+// }
+
+// Route protégée qui redirige vers la page de login si l'utilisateur n'est pas connecté
+// import { useAuth } from "./contexts/AuthContext";
+// import { Navigate } from "react-router-dom";
+
+// const PrivateRoute = ({ children }) => {
+//   const { user } = useAuth();
+//   return user ? children : <Navigate to="/login" />;
+// };
+
+// export default App;

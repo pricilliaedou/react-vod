@@ -17,6 +17,7 @@ const Header = () => (
         <input type='search' />
         <div className='icone'></div>
       </div>
+
       <div className='profil'>
         <Link to={'/login'}>
           <img src={contact} alt='connexion' />

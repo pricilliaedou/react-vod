@@ -1,22 +1,21 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import bgLogin from './background_login.png';
-import Logo from '../../assets/logo.png';
-import './style.scss';
+import React, { useState } from "react";
+import bgLogin from "./background_login.png";
+import Logo from "../../assets/logo.png";
+import { Link } from "react-router-dom";
+import "./style.scss";
 
-const Login = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
+const Signup = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
 
   const handleLogin = (e) => {
     e.preventDefault();
-    if (email === 'jdoe@ymail.com' && password === 'demo') {
-      setError('');
-      // Redirection vers une autre page, ici un composant React utilisant react-router
-      window.location.href = '/';
+    if (email === "jdoe@ymail.com" && password === "demo") {
+      setError("");
+      window.location.href = "/";
     } else {
-      setError('Adresse mail ou mot de passe incorrect.');
+      setError("Adresse mail ou mot de passe incorrect.");
     }
   };
   return (
@@ -26,12 +25,23 @@ const Login = () => {
           <img className='illustration' src={bgLogin} alt='Illustration' />
         </div>
         <div className='right-side'>
-          <Link to={'/'}>
+          <Link to={"/"}>
             <img className='logo-login' src={Logo} alt='logo' />
           </Link>
           <div className='form-container'>
-            <h2>Se connecter</h2>
+            <h2>S&apos;inscrire</h2>
             <form onSubmit={handleLogin}>
+              <div className='input-group'>
+                <label>
+                  Nom
+                  <input
+                    type='nom'
+                    placeholder='Jane DOE'
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                </label>
+              </div>
               <div className='input-group'>
                 <label>
                   Adresse email
@@ -54,22 +64,11 @@ const Login = () => {
                   />
                 </label>
               </div>
-              <div className='checkbox-group'>
-                <label htmlFor='rememberMe'>
-                  <input type='checkbox' id='rememberMe' /> Se souvenir de moi
-                </label>
-                <a href='/forgot-password'>Mot de passe oublié</a>
-              </div>
-              {error && <p style={{ color: 'red' }}>{error}</p>}
+              {error && <p style={{ color: "red" }}>{error}</p>}
               <div className='btn-login'>
-                <button type='submit'>Je me connecte</button>
+                <button type='submit'>S&apos;inscrire</button>
               </div>
             </form>
-            <div className='register-link'>
-              <Link to={'/signup'}>
-                <span>Vous êtes nouveau ?</span> S&apos;inscrire
-              </Link>
-            </div>
           </div>
         </div>
       </main>
@@ -77,4 +76,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Signup;
