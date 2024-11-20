@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import Navbar from '../Navbar';
-import plmTeam from '../../assets/plmteam.png';
-import './style.scss';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import Navbar from "../Navbar";
+import plmTeam from "../../assets/plmteam.png";
+import "./style.scss";
 
 const Contact = () => {
   // États pour les champs du formulaire
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
   const [errors, setErrors] = useState({});
   const [formSubmitted, setFormSubmitted] = useState(false);
 
@@ -17,7 +17,7 @@ const Contact = () => {
     const newErrors = {};
 
     if (name.trim().length < 2) {
-      newErrors.name = 'Le nom doit contenir au moins deux lettres.';
+      newErrors.name = "Le nom doit contenir au moins deux lettres.";
     }
 
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -25,7 +25,7 @@ const Contact = () => {
       newErrors.email = "L'adresse email est invalide.";
     }
     if (message.trim().length < 20) {
-      newErrors.message = 'Le message doit contenir au moins 20 caractères.';
+      newErrors.message = "Le message doit contenir au moins 20 caractères.";
     }
     setErrors(newErrors);
 
@@ -61,7 +61,7 @@ const Contact = () => {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
               />
-              {errors.name && <p style={{ color: 'red' }}>{errors.name}</p>}
+              {errors.name && <p style={{ color: "red" }}>{errors.name}</p>}
             </div>
 
             <div>
@@ -81,7 +81,7 @@ const Contact = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
-              {errors.email && <p style={{ color: 'red' }}>{errors.email}</p>}
+              {errors.email && <p style={{ color: "red" }}>{errors.email}</p>}
             </div>
             <div>
               <input type='text' placeholder='Sujet' />
@@ -97,17 +97,17 @@ const Contact = () => {
                 onChange={(e) => setMessage(e.target.value)}
               />
               {errors.message && (
-                <p style={{ color: 'red' }}>{errors.message}</p>
+                <p style={{ color: "red" }}>{errors.message}</p>
               )}
             </div>
             <button type='submit'>Envoyer</button>
           </form>
           {/* Afficher un message de confirmation ou d'erreur */}
           {formSubmitted && (
-            <p style={{ color: 'green' }}>Formulaire soumis avec succès !</p>
+            <p style={{ color: "green" }}>Formulaire soumis avec succès !</p>
           )}
           {!formSubmitted && Object.keys(errors).length > 0 && (
-            <p style={{ color: 'red' }}>Le formulaire contient des erreurs.</p>
+            <p style={{ color: "red" }}>Le formulaire contient des erreurs.</p>
           )}
         </div>
         <div className='main-contact-right'>
