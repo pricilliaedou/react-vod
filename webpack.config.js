@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ESLintPlugin = require("eslint-webpack-plugin");
+const Dotenv = require("dotenv-webpack");
 
 module.exports = {
   entry: "./src/index.js",
@@ -63,5 +64,6 @@ module.exports = {
       failOnError: false,
       emitWarning: true, // Les erreurs sont traitées comme des avertissements
     }),
+    new Dotenv(),
   ],
 };

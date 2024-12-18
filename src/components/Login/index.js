@@ -18,8 +18,11 @@ const Login = () => {
     setIsLoading(true);
     setError("");
 
+    const apiUrl = process.env.REACT_APP_API_URL;
+    // "http://localhost:8080/public/login"
+
     try {
-      const response = await axios.post("http://localhost:8080/public/login", {
+      const response = await axios.post(`${apiUrl}/public/login`, {
         username: email,
         password,
       });
